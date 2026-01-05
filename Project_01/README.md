@@ -22,23 +22,23 @@ The application supports timing analysis for multiple operation types, including
 
 The execution time results were processed and visualized using histograms to show the distribution of clock cycles for each operation type.
 
-Floating Point Addition Histogram
+**Floating Point Addition Histogram**
 
 This histogram shows the execution time distribution for repeated floating point addition operations.
 
-<img src="./images/Float_addition_Histogram.png" width="600">
+<img src="./images/Float_addition_Histogram.png" width="400">
 
-DDR Memory Read Histogram
+**DDR Memory Read Histogram**
 
 This histogram illustrates the timing behavior of DDR memory read operations and highlights memory access latency and cache effects.
 
-<img src="./images/DDR_Read_Histogram.png" width="600">
+<img src="./images/DDR_Read_Histogram.png" width="400">
 
-GPIO LED Write Histogram
+**GPIO LED Write Histogram**
 
 This histogram represents the execution time required to write data to the LED GPIO peripheral.
 
-<img src="./images/Write_to_LED_Histogram.png" width="600">
+<img src="./images/Write_to_LED_Histogram.png" width="400">
 
 
 
