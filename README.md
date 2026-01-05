@@ -4,3 +4,5 @@ System synthesis and modeling techniques including partitioning, scheduling, con
 **Project_01:** This project analyzes execution time and clock cycle behavior on a MicroBlaze based FPGA system using hardware timer measurements.
 
 **Project_02:** This project implements a stopwatch on a MicroBlaze based FPGA system using a hardware timer interrupt, push button controls, and an eight digit seven segment display.
+
+**Project_03:** This project implements a rotary encoder controlled LED system on a MicroBlaze based FPGA platform using interrupt driven input handling and real time GPIO control.
