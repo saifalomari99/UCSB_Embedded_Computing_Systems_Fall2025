@@ -2,23 +2,13 @@
 
 This project implements a MicroBlaze based stopwatch that displays time on an 8 digit seven segment display and is controlled using five push buttons. A hardware timer interrupt generates a precise 1 ms tick, enabling accurate real time counting with start, stop, direction control, and reset functionality.
 
-## System Architecture
-
-The stopwatch system is built around a MicroBlaze soft processor connected to an AXI Timer, AXI GPIO for button input, a seven segment display interface, and an interrupt controller. The timer generates periodic interrupts, while the processor handles timekeeping logic, button control, and display updates.
-
-### RTL Block Design Inputs
-
-<img src="./images/RTL_Block_Design_Inputs.png" width="800">
-
-### RTL Block Design Outputs
-
-<img src="./images/RTL_Block_Design_Outputs.png" width="800">
-
 ## Application Level Description
 
-At the application level, the stopwatch maintains millisecond and second counters that are updated inside a timer interrupt service routine. The main loop continuously multiplexes the seven segment display and polls the button GPIO to detect edge triggered user input.
+At the application level, the stopwatch maintains millisecond and second counters that are updated inside a timer interrupt service routine. The timer generates a periodic interrupt every 1 millisecond, allowing the system to track time accurately and independently of display refresh or button polling.
 
-The stopwatch supports both count up and count down modes and prevents underflow when counting down.
+The main execution loop continuously multiplexes the seven segment display by cycling through all eight digits and rendering the corresponding values. Button inputs are read through an AXI GPIO interface, and edge detection logic ensures that each button press triggers a single action.
+
+The stopwatch supports both count up and count down modes. In count down mode, the time value is clamped at zero to prevent underflow.
 
 ### Button Controls
 
@@ -28,9 +18,21 @@ The stopwatch supports both count up and count down modes and prevents underflow
 - **Down**: Set count down direction  
 - **Center**: Reset time to 00:00.000  
 
-## Timer Operation
+## System Architecture
 
-The AXI Timer is configured in auto reload mode to generate an interrupt every 1 millisecond. This interrupt driven design allows accurate and deterministic timekeeping independent of display refresh timing.
+The stopwatch system is built around a MicroBlaze soft processor connected to an AXI Timer, AXI GPIO for button input, a seven segment display interface, and an interrupt controller. The timer interrupt drives the timekeeping logic, while the processor handles display updates and user input.
+
+### RTL Block Design Inputs
+
+<img src="./images/RTL_Block_Design_Inputs.png" width="400">
+
+### RTL Block Design Outputs
+
+<img src="./images/RTL_Block_Design_Outputs.png" width="400">
+
+## Timer Operation and Verification
+
+The AXI Timer is configured in auto reload mode to generate an interrupt every 1 millisecond. This interrupt driven design provides deterministic and stable time measurement.
 
 ### Timer Counting Behavior
 
@@ -45,4 +47,3 @@ The stopwatch timing was verified against an external reference to confirm corre
 ## Summary
 
 This project demonstrates interrupt driven timing, GPIO based user control, and seven segment display multiplexing on a MicroBlaze based FPGA system. It provides a practical example of real time embedded system design using FPGA based SoC architecture.
-
