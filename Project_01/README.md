@@ -6,4 +6,4 @@ This project is a timing and performance measurement application developed for a
 
 The block design below shows the overall MicroBlaze based system architecture used for the experiments.
 
-<img src="./images/block_design.png" width="800">
+<img src="./images/RTL_Block_Design.png" width="800">
