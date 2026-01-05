@@ -20,13 +20,13 @@ The stopwatch supports both count up and count down modes. In count down mode, t
 
 ### Timer Counting Behavior
 
-<img src="./images/Timer_Counting.png" width="600">
+<img src="./images/Timer_Counting.png" width="400">
 
 ### Timer Verification
 
 The stopwatch timing was verified against an external reference to confirm correct operation and accuracy.
 
-<img src="./images/Timer_matches_iPad.png" width="600">
+<img src="./images/Timer_matches_iPad.png" width="400">
 
 
 
