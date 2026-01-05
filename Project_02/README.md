@@ -1,6 +1,6 @@
 # MicroBlaze_Stopwatch_7Segment_Controller
 
-This project implements a MicroBlaze based stopwatch that displays time on an 8 digit seven segment display and is controlled using five push buttons. A hardware timer interrupt generates a precise 1 ms tick, enabling accurate real time counting with start, stop, direction control, and reset functionality.
+This project implements a MicroBlaze based stopwatch that displays time on an 8 digit seven segment display and is controlled using five push buttons. A hardware timer interrupt generates a precise 1 ms tick, enabling accurate real time counting with start, stop, direction control, and reset functionality. It provides a practical example of real time embedded system design using FPGA based SoC architecture.
 
 ## Application Level Description
 
@@ -16,7 +16,20 @@ The stopwatch supports both count up and count down modes. In count down mode, t
 - **Left**: Stop stopwatch  
 - **Up**: Set count up direction  
 - **Down**: Set count down direction  
-- **Center**: Reset time to 00:00.000  
+- **Center**: Reset time to 00:00.000
+
+### Timer Counting Behavior
+
+<img src="./images/Timer_Counting.png" width="600">
+
+### Timer Verification
+
+The stopwatch timing was verified against an external reference to confirm correct operation and accuracy.
+
+<img src="./images/Timer_matches_iPad.png" width="600">
+
+
+
 
 ## System Architecture
 
@@ -30,20 +43,7 @@ The stopwatch system is built around a MicroBlaze soft processor connected to an
 
 <img src="./images/RTL_Block_Design_Outputs.png" width="400">
 
-## Timer Operation and Verification
 
-The AXI Timer is configured in auto reload mode to generate an interrupt every 1 millisecond. This interrupt driven design provides deterministic and stable time measurement.
 
-### Timer Counting Behavior
 
-<img src="./images/Timer_Counting.png" width="600">
 
-### Timer Verification
-
-The stopwatch timing was verified against an external reference to confirm correct operation and accuracy.
-
-<img src="./images/Timer_matches_iPad.png" width="600">
-
-## Summary
-
-This project demonstrates interrupt driven timing, GPIO based user control, and seven segment display multiplexing on a MicroBlaze based FPGA system. It provides a practical example of real time embedded system design using FPGA based SoC architecture.
