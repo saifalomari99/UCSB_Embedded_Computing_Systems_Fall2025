@@ -1,4 +1,4 @@
-# ECE253 Lab2b — LCD Volume UI with QP-nano HSM on MicroBlaze
+# LCD Volume UI with QP-nano HSM on MicroBlaze
 
 **Authors:** Saif Alomari, Dominic Zboyan
 
@@ -51,6 +51,3 @@ Initial
 
 The system is built around a MicroBlaze soft processor connected to several AXI peripherals, including an SPI controller for the LCD, GPIO cores for the rotary encoder and buttons, a hardware timer for the inactivity timeout, and a UART for serial debug output via xil_printf.
 
-## Build and Flash
-
-This project is built using the Xilinx Vitis IDE targeting a MicroBlaze softcore instantiated in Vivado. After generating the bitstream and exporting the hardware platform from Vivado, a Vitis application project is created by importing the source files and linking the QP-nano sources. The project is then built and flashed to the board over JTAG. Serial debug output is available at 115200 baud.
