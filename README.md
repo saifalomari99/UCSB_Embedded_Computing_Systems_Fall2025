@@ -30,14 +30,13 @@ System synthesis and modeling techniques including partitioning, scheduling, con
   <tr>
     <td align="center"><b>Project 04</b></td>
     <td align="center"><b>Project 05</b></td>
-    <td></td>
+    <td>align="center"><b>Project 05</b></td>
   </tr>
   <tr>
     <td align="center"><img src="Project_04/project_images/Background_Pattern.jpg" width="300"/></td>
     <td align="center">
       <img src="Project_05/project_images/full_project.jpeg" width="300"/>
-      <img src="Project_05/project_images/main_screen.jpeg" width="300"/>
     </td>
-    <td></td>
+    <td><img src="Project_05/project_images/main_screen.jpeg" width="300"/></td>
   </tr>
 </table>
