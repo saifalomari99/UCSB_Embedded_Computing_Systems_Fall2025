@@ -1,6 +1,6 @@
 # MicroBlaze_FM_Synthesizer
 
-<img src="project_images/full_project.jpeg" width="600"/>
+<img src="project_images/full_project.jpeg" width="500"/>
 
 This project implements a polyphonic FM synthesizer on a Nexys A7 FPGA board running on a MicroBlaze softcore processor. A 14-key piano keyboard mapped to GPIO drives real-time note playback through a software FM synthesis engine with a full ADSR envelope. Synthesis parameters are displayed and edited live on a 2.8 inch SPI TFT LCD using a QP-nano Hierarchical State Machine to manage UI state. The system supports up to two octave shifts and multiple waveform types for both the carrier oscillator and the FM operator.
 
@@ -48,16 +48,16 @@ Initial
 On startup the welcome screen is displayed, prompting the user to press the center button to begin. The main screen displays all current synthesis parameters in a read-only view during live playback. The edit screen renders the same parameter list with a blinking yellow selection cursor indicating which parameter is active for adjustment.
 
 Welcome Screen
-
-![Welcome Screen](project_images/welcome_screen.jpeg)
-
+ 
+<img src="project_images/welcome_screen.jpeg" width="400"/>
+ 
 Main Screen
-
-![Main Screen](project_images/main_screen.jpeg)
-
+ 
+<img src="project_images/main_screen.jpeg" width="400"/>
+ 
 Edit Screen
-
-![Edit Screen](project_images/edit_screen.jpeg)
+ 
+<img src="project_images/edit_screen.jpeg" width="400"/>
 
 ## Hardware Setup
 
